@@ -79,6 +79,8 @@ function createButtons() {
                 showModal('webpageModal');
             } else if (config.text === 'Volume Control') {
                 showModal('volumeModal');
+            } else if (config.text === 'Shutdown Phone') {
+                showModal('shutdownModal');
             } else {
                 sendWebhook(index);
             }
@@ -233,6 +235,11 @@ function submitVolume() {
     closeModal('volumeModal');
 }
 
+function shutdownConfirmed() {
+    sendWebhook(buttonConfigs.findIndex(config => config.text === 'Shutdown Phone'));
+    closeModal('shutdownModal');
+}
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('passwordInput');
@@ -256,6 +263,9 @@ document.getElementById('webpageInput').addEventListener('keyup', function(event
 
 document.getElementById('volumeSubmitButton').addEventListener('click', submitVolume);
 document.getElementById('volumeCancelButton').addEventListener('click', () => closeModal('volumeModal'));
+
+document.getElementById('shutdownButton').addEventListener('click', shutdownConfirmed);
+document.getElementById('shutdownCancel').addEventListener('click', () => closeModal('shutdownModal'));
 
 const volumeSlider = document.getElementById('volumeSlider');
 const volumeValue = document.getElementById('volumeValue');
