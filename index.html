@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-container">
+            <h2>Login Required</h2>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button onclick="checkPassword()" class="modal-button">Login</button>
+            <p id="loginError" class="error-message"></p>
+        </div>
+    </div>
+
+    <div id="button-container"></div>
+
+    <div id="webpageModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Webpage URL</h2>
+            <input type="text" id="webpageInput" placeholder="Enter URL">
+            <div id="errorMessage" class="error-message"></div>
+            <div class="modal-buttons">
+                <button id="submitButton" class="modal-button">Submit</button>
+                <button id="cancelButton" class="modal-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="volumeModal" class="modal">
+        <div class="modal-content volume-content">
+            <h2>Volume Control</h2>
+            <div class="volume-control">
+                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                <div class="volume-display">
+                    <span id="volumeValue">50</span>%
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button id="volumeSubmitButton" class="modal-button">Set Volume</button>
+                <button id="volumeCancelButton" class="modal-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
