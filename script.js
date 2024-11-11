@@ -1,5 +1,5 @@
 const buttonContainer = document.getElementById('button-container');
-const baseWebhookUrl = 'https://tinyurl.com/236I8kg2';
+const baseWebhookUrl = 'https://trigger.macrodroid.com/834a628e-a605-4607-8ecf-d36b504db193';
 
 // Password protection
 const HASHED_PASSWORD = '0e60a6a9442fa12bba169f47326f995801e892f01dfa524467b2652969edaa60';
