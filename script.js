@@ -1,24 +1,24 @@
 const buttonContainer = document.getElementById('button-container');
-const baseWebhookUrl = 'https://trigger.macrodroid.com/20105183-0b4f-4260-9f8d-33e02ade21ca';
+const baseWebhookUrl = 'https://tinyurl.com/236I8kg2';
 
 // Password protection
 const HASHED_PASSWORD = '0e60a6a9442fa12bba169f47326f995801e892f01dfa524467b2652969edaa60';
 let isAuthenticated = false;
 
 const buttonConfigs = [
-    { text: 'Unlock', uri: '/owner?order=unlock' },
-    { text: 'Open Anydesk', uri: '/owner?order=ad' },
-    { text: 'Close AD & Lock Phone', uri: '/owner?order=lockad' },
-    { text: 'Lock Phone', uri: '/owner?order=lock' },
-    { text: 'Lock apps', uri: '/owner?order=kennel' },
-    { text: 'Unlock apps', uri: '/owner?order=unkennel' },
-    { text: 'Shutdown Phone', uri: '/owner?order=shutdown' },
-    { text: 'Clicker', uri: '/clicker' },
-    { text: '[placeholder for shock]', uri: '/zap' },
-    { text: 'Open a webpage', uri: '/link?link=' },
-    { text: 'Launch Home screen', uri: '/owner?order=home' },
-    { text: 'Back Button', uri: '/owner?order=back' },
-    { text: 'Volume Control', uri: '/volume?level=' },
+    { text: 'Unlock', uri: '/god?order=unlock' },
+    { text: 'Lock Phone', uri: '/god?order=lock' },
+    { text: 'Open Anydesk', uri: '/god?order=ad' },
+    { text: 'Close AD & Lock Phone', uri: '/god?order=closead' },
+    { text: 'Lock apps', uri: '/god?order=lockapp' },
+    { text: 'Unlock apps', uri: '/god?order=unlockapp' },
+    { text: 'Shutdown Phone', uri: '/god?order=shutdown' },
+    { text: 'Clicker', uri: '/god?order=click' },
+    { text: '[placeholder for shock]', uri: '/god?order=zap' },
+    { text: 'Open a webpage', uri: '/god?url=' },
+    { text: 'Launch Home screen', uri: '/god?order=home' },
+    { text: 'Back Button', uri: '/god?order=back' },
+    { text: 'Volume Control', uri: '/god?vol=' },
 ];
 
 // Password hashing function
